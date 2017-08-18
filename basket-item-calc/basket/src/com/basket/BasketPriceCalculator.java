@@ -17,7 +17,8 @@ public class BasketPriceCalculator {
         basket.addItem(new Item(ItemDetail.APPLE));
         basket.addItem(new Item(ItemDetail.BANANA));
         basket.addItem(new Item(ItemDetail.PEACH));
-        System.out.println("Total Price:" + calc.calculateBasketPrice(basket));
+        calc.setBasket(basket);
+        System.out.println("Total Price:" + calc.calculateBasketPrice());
     }
 
 

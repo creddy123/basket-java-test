@@ -9,9 +9,8 @@ public class BasketCalculatorSer{
     private static final MathContext MATHCONTEXT = new MathContext(2);
     private Basket basket;
 
-    public BigDecimal calculateBasketPrice(Basket basket) {
-        this.basket = basket;
-        if( basket == null ) {
+    public BigDecimal calculateBasketPrice() {
+        if( basket == null || basket.getItemlist().isEmpty() ) {
             throw new RuntimeException("Basket is empty");
         }
         else {
